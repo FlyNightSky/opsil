@@ -1,0 +1,35 @@
+---
+import Os from "../layouts/os.astro"
+---
+
+<main class="z-[100] flex justify-center items-center w-screen h-screen shadow-2xl shadow-[#252525]" id="msg">
+
+<div class="bg-[#252525] p-5 rounded-lg">
+    <div class="flex justify-center w-full ">
+        <img src="/favicon.png" width="60">
+    </div>
+
+    <div class="flex justify-center w-full">
+         <div class="border-b pt-2 w-36 border-white"></div>
+    </div>
+
+    <div class="pt-2">
+        <div class="flex w-full justify-center ">
+            <h1 class="text-3xl pb-2"  style="font-family:Lexend;"> Welcome to OPSIL OS</h1>
+        </div>
+        <div class=" flex justify-center w-full pb-5" style="font-family:k2d;">
+            <p class=" text-center w-96">
+                We are thrilled to witness your utilization of OPSIL OS, a cutting-edge operating system. OPSIL OS offers a multitude of benefits, proxy updates through the utilization of cognet services, and access to a wide array of premium content.
+                <br><br>
+                Go and take a tour of OPSIL OS :)
+            </p>
+        </div>
+        <div class="flex justify-center w-full">
+            <div onclick="document.getElementById('msg').style.display = 'none';" class="border border-white rounded-full p-2 px-8 hover:cursor-pointer">
+                CLOSE
+            </div>
+        </div>
+    </div>
+</div>
+</main>
+

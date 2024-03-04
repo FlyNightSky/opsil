@@ -1,0 +1,150 @@
+---
+---
+
+<main class="w-screen h-screen z-0">
+  <div
+    class="flex justify-center items-center absolute w-full h-full text-9xl text-[#ADADAD] opacity-30"
+    style="font-family:League Spartan;"
+  >
+    OPSIL OS V1
+  </div>
+
+  <div class="flex justify-start w-screen h-screen">
+    <div class="mt-28">
+      <svg
+        width="51"
+        height="51"
+        viewBox="0 0 81 81"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        class="px-2"
+      >
+        <path
+          d="M57.375 20.25H74.25V27H67.5V70.875C67.5 72.739 65.989 74.25 64.125 74.25H16.875C15.0111 74.25 13.5 72.739 13.5 70.875V27H6.75V20.25H23.625V10.125C23.625 8.26105 25.1361 6.75 27 6.75H54C55.864 6.75 57.375 8.26105 57.375 10.125V20.25ZM60.75 27H20.25V67.5H60.75V27ZM30.375 37.125H37.125V57.375H30.375V37.125ZM43.875 37.125H50.625V57.375H43.875V37.125ZM30.375 13.5V20.25H50.625V13.5H30.375Z"
+          fill="white"></path>
+      </svg>
+
+      <div
+        id="grid"
+        class="grid grid-cols-4 px-2 pt-5 gap-2 w-full select-none z-40"
+      >
+        <div id="element" class="rounded-lg bg-[#252525] p-3 absolute z-10">
+          <a
+            ><img
+              src="https://cognet.vercel.app/logo.png"
+              width="35"
+              draggable="false"
+            /></a
+          >
+        </div>
+      </div>
+      <div>
+
+
+      <div
+      id="menu"
+        class="flex justify-center  w-screen bottom-0 pb-5"
+      >
+        <div class="bg-[#262626] p-2 rounded-lg hover:cursor-pointer">
+          <svg
+            width="54"
+            height="48"
+            viewBox="0 0 64 58"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect width="18.5397" height="17.2432" rx="3" fill="#3D3D3D"></rect>
+            <rect
+              x="22.3427"
+              width="18.5397"
+              height="17.2432"
+              rx="3"
+              fill="#3D3D3D"></rect>
+            <rect
+              x="44.6855"
+              width="18.5397"
+              height="17.2432"
+              rx="3"
+              fill="#3D3D3D"></rect>
+            <rect
+              y="20.3784"
+              width="18.5397"
+              height="17.2432"
+              rx="3"
+              fill="#3D3D3D"></rect>
+            <rect
+              x="22.3427"
+              y="20.3784"
+              width="18.5397"
+              height="17.2432"
+              rx="3"
+              fill="#3D3D3D"></rect>
+            <rect
+              x="44.6855"
+              y="20.3784"
+              width="18.5397"
+              height="17.2432"
+              rx="3"
+              fill="#3D3D3D"></rect>
+            <rect
+              y="40.7567"
+              width="18.5397"
+              height="17.2432"
+              rx="3"
+              fill="#3D3D3D"></rect>
+            <rect
+              x="22.3427"
+              y="40.7567"
+              width="18.5397"
+              height="17.2432"
+              rx="3"
+              fill="#3D3D3D"></rect>
+            <rect
+              x="44.6855"
+              y="40.7567"
+              width="18.5397"
+              height="17.2432"
+              rx="3"
+              fill="#3D3D3D"></rect>
+          </svg>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</main>
+
+<script>
+    
+  // Get the draggable element
+  var draggableElement = document.getElementById("element");
+
+  // Variables to store the starting position of the draggable element
+  var startX, startY;
+
+  // Function to handle the start of dragging
+  function startDragging(event) {
+    startX = event.clientX - draggableElement.offsetLeft;
+    startY = event.clientY - draggableElement.offsetTop;
+    document.addEventListener("mousemove", dragElement);
+    document.addEventListener("mouseup", stopDragging);
+  }
+
+  // Function to handle the dragging of the element
+  function dragElement(event) {
+    event.preventDefault();
+    draggableElement.style.left = event.clientX - startX + "px";
+    draggableElement.style.top = event.clientY - startY + "px";
+    dragElement.style.opacity = "0.9";
+    dragElement.style.filter = "alpha(opacity=90)";
+  }
+
+  // Function to handle the end of dragging
+  function stopDragging() {
+    document.removeEventListener("mousemove", dragElement);
+    document.removeEventListener("mouseup", stopDragging);
+  }
+
+  // Add event listener to start dragging on mousedown
+  draggableElement.addEventListener("mousedown", startDragging);
+</script>
